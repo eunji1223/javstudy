@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>과제 2</title>
+    </head>
+    <body>
+        <script>
+            var ui = prompt('');
+            var number = [1];
+            for(var i=1; i<ui; i++){
+                if (number.length == 1){
+                    number.push(i);
+                }
+                else{
+                    number.push(number[number.length-2]+number[number.length-1]);
+                }
+            }
+            alert(number[ui-1]);
+        </script>
+    </body>
+</html>
