@@ -6,7 +6,25 @@
     </head>
     <body>
         <script>
-            prompt('')
+            function blackjack(num,sum){
+                var max = 0
+                if(num <3 && num > 300000){return None;}
+                var numlist = prompt('').split(" ");
+                for(var i=0; i<num; i++){
+                    for(var j=i+1; j<num; j++){
+                        for(var k = j+1; k<num; k++){
+                            var total = Number(numlist[i]) + Number(numlist[j]) + Number(numlist[k]);
+                            if (total >= max && total <= sum){
+                                max = total;
+                            }
+                        }
+                    }
+                }
+                return max
+            }
+            var [num,sum] = prompt('').split(" ")
+            var max = blackjack(num,sum)
+            alert(max)
         </script>
     </body>
 </html>
